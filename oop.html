@@ -58,25 +58,146 @@
                     <!-- Content -->
                     <section>
                         <section id="unit-1">
-
                             <h2 id="contents">Unit 1: An Introduction to Python Programming and the OO Programming
                                 Paradigm</h2>
-                            <p>This is what I did for this unit.</p>
-
+                            <h3>Review the article by Di Silvestro & Nadir (2021). Discuss one aspect of this article
+                                which you find unexpected.</h3>
+                            <p>One unexpected aspect of the article is the significant emphasis on collaboration during
+                                the ePortfolio development process. The students' spoke about the benefits they
+                                experienced from working with their peers. They expressed gratitude for the support,
+                                comments, suggestions, and edits provided by their classmates.</p>
+                            <p>To me this was unexpected because I think ePortfolios are seen as a showcase of an
+                                individual’s work. I personally saw them as a way for students to show their personal
+                                growth and present their achievements. However, the findings in this article show that
+                                collaboration also plays a role in students' ePortfolio development and working together
+                                adds value to the educational experience. The collaborative aspect of ePortfolio
+                                development can get students to engage more which improves learning outcomes and
+                                encourages personal growth.</p>
+                            <p>References: </p>
+                            <p>Di Silvestro, F., & Nadir, M. (2021). The Power of ePortfolio Development to Foster
+                                Reflective and Deeper Learning in an Online Graduate Adult Education Program. <em> Adult
+                                    Learning </em>, 32(4), 154-164.</p>
+                            <br />
+                            <h3> Develop a Python program and apply protected and unprotected variables within it. </h3>
+                            <br />
+                            <pre>
+                                <code>
+    class User:
+        def __init__(self, username, password):
+            self.username = username  # Unprotected variable
+            self._password = password  # Protected variable
+                                    
+        def login(self, username, password):
+            if self.username == username and self._password == password:
+                print("Login successful!")
+            else:
+                print("Invalid username or password.")
+                                    
+    # Create a User instance
+    user = User("myusername", "mypassword")
+                                    
+    # Access and modify the username (unprotected)
+    print(user.username)
+    user.username = "newusername"
+    print(user.username)
+                                    
+    # Access and modify the password (protected)
+    print(user._password)
+    user._password = "newpassword"
+    print(user._password)
+                                    
+    # Attempt login
+    user.login("myusername", "mypassword")
+    user.login("myusername", "wrongpassword")
+                                </code>
+                            </pre>
                             <hr class="major" />
+
                         </section>
                         <section id="unit-2">
 
                             <h2 id="content">Unit 2: Object Oriented Analysis - Initial Steps towards Programming in
                                 Python</h2>
-                            <p>This is what I did for this unit.</p>
+                            <h3>The summative assessment for this module involves the design and implementation of
+                                software to support operation of an autonomous car.</h3>
+                            <h3>Write a pen portrait for a user of a driverless car.</h3>
+                            <p>Name: Michael Smith <br /> Age: 42 <br /> Location: New York City <br /> Job Role: Taxi
+                                Driver</p>
+                            <p> Michael Smith, an experienced taxi driver in New York City, made the transition from
+                                manual cars to a driverless vehicle to alleviate the physical strain of driving all day.
+                                With eight years of experience navigating the bustling city streets, Michael recognised
+                                the toll it took on his body. Embracing autonomous technology, he now enjoys reduced
+                                stress and fatigue, allowing him to focus on providing excellent customer service. As a
+                                taxi driver, Michael appreciates the efficiency and reliability of his driverless car,
+                                enabling him to transport passengers safely and comfortably while also improving his own
+                                well-being. He looks forward to embracing the future of transportation while maintaining
+                                his health and job satisfaction.</p>
+
+                            <h3>Create a use case model which captures the ways in which a user needs to interact with
+                                the software system.</h3>
+                            <span class="image main"><img src="images\Driverless Taxi Use Case UML.png" alt="" /></span>
+
 
                             <hr class="major" />
                         </section>
                         <section id="unit-3">
 
                             <h2 id="content">Unit 3: UML</h2>
-                            <p>This is what I did for this unit.</p>
+                            <h3>Discuss which UML models are most applicable at different stages of the Software
+                                Development Life Cycle.</h3>
+
+                            <p> UML models are tools that help visualise and plan software systems at different stages
+                                of development. The choice of which models to use depends on the specific project and
+                                the needs of the developers and testers involved. However, the general use of UML models
+                                during the Software Development Life Cycle could be:</p>
+
+                            <ol>
+                                <li><b>Requirement analysis:</b></li>
+                                <p> Use Case Diagrams: These diagrams help identify and describe what the software needs
+                                    to
+                                    do from the users' perspective.</p>
+
+                                <li><b>Planning:</b></li>
+                                <p>Class Diagrams: These diagrams show the different parts of the system, like classes
+                                    and
+                                    their relationships, helping us plan how the system will work.<br />Sequence
+                                    Diagrams: These diagrams illustrate the steps and interactions between different
+                                    parts of the system, helping us understand the order of actions.<br />Activity
+                                    Diagrams: These diagrams show the flow of activities or steps in a process,
+                                    helping us visualise how the system should work.</p>
+
+                                <li><b>Software design:</b></li>
+                                <p>Class Diagrams: These diagrams provide more detailed information about the structure
+                                    of
+                                    the system, helping developers write the actual code.<br />Sequence Diagrams: These
+                                    diagrams help developers understand how different parts of the
+                                    system should interact with each other, which is important for coding.</p>
+
+                                <li><b>Software development:</b></li>
+                                <p>Class Diagrams: Developers use these diagrams to guide them when writing the code for
+                                    the system.</p>
+
+                                <li><b>Testing:</b></li>
+                                <p>Use Case Diagrams: These diagrams are useful for creating test cases to make sure the
+                                    software works as intended.<br />Sequence Diagrams: Testers can use these diagrams
+                                    to design tests based on the expected interactions between different parts of the
+                                    system.</p>
+
+                                <li><b>Deployment:</b></li>
+                                <p>Deployment Diagrams: These diagrams show how the software components are deployed on
+                                    hardware, helping with the setup and configuration of the system.</p>
+                            </ol>
+                            <p>References: </p>
+                            <p>Altvater, A. (2023) <em>What is SDLC? understand the software development life cycle,
+                                Stackify.</em> Available at: https://stackify.com/what-is-sdlc/</p>
+                            <p>Lange, C. F. J., Chaudron, M. R. V. & Muskens, J. (2006) In practice: UML software
+                                architecture and design description. <em>IEEE Software</em> 23(2): 40-46.</p>
+
+                            <h3>Making reference to ‘The Unified Modeling Language Reference Manual Second Edition’, use
+                                the State Machine Diagram in Figure 3-7 to design a similar model for a washing machine.
+                            </h3>
+                            <span class="image main"><img src="images\Washing Machine UML.png" alt="" /></span>
+
 
                             <hr class="major" />
                         </section>
@@ -84,21 +205,121 @@
 
                             <h2 id="content">Unit 4: Applying a UML Model to a Program Implementation: UML in
                                 Practice</h2>
-                            <p>This is what I did for this unit.</p>
+                            <h3>Design an activity diagram which shows the relationships and interactivity between the
+                                user’s behaviour within the driverless car.</h3>
+                            <span class="image main"><img src="images\Driverless Taxi Activity UML.png" alt="" /></span>
 
+
+                            <h3>Expand upon the activity diagram with the development of a class diagram using UML to
+                                support a system with basic employee-related functionality. This should include the
+                                retention of employee details and allowing an employee to book a day of annual leave.
+                            </h3>
+                            <span class="image main"><img src="images\Employee Class UML.png" alt="" /></span>
+
+                            <h3>Develop the Python program to implement the class model.</h3>
+                            <br />
+                            <pre>
+                                <code>
+    class Employee:
+        def __init__(self, emp_no, name, leave_balance):
+            self.emp_no = emp_no
+            self.name = name
+            self.leave_balance = leave_balance
+                            
+        def book_leave(self, num_days):
+            if self.leave_balance >= num_days:
+                self.leave_balance -= num_days
+                print(f"Successfully booked {num_days} day(s) of leave. Your updated leave balance is {self.leave_balance} day(s).")
+            else:
+                print("Insufficient leave balance.")
+                            
+    # Create Employee
+    employee1 = Employee(1, "Adesola", 7)
+                            
+    # Employee Details
+    print("Employee Details:")
+    print("Employee Number:", employee1.emp_no)
+    print("Name:", employee1.name)
+    print("Leave Balance:", employee1.leave_balance, "day(s)")
+                            
+    # Book Leave
+    print("\nBooking Leave:")
+    num_days = int(input("Enter the number of days of leave you want to book: "))
+    employee1.book_leave(num_days)
+                            </code>
+                        </pre>
                             <hr class="major" />
                         </section>
                         <section id="unit-5">
 
                             <h2 id="content">Unit 5: More on Classes</h2>
-                            <p>This is what I did for this unit.</p>
-
+                            <h3>Write a Python program with polymorphism that is usable within the summative assessment
+                                for the driverless car.</h3>
+                            <br />
+                            <pre>
+                                <code>
+    class Car:
+        def __init__(self, brand, model):
+            self.brand = brand
+            self.model = model
+                            
+        def info(self):
+            print(f"I am a {self.brand} {self.model}.")
+                            
+        def get_speed(self):
+            pass
+                            
+        def drive(self):
+            print("The car is driving.")
+                            
+                            
+    class SUV(Car):
+        def __init__(self, brand, model):
+            super().__init__(brand, model)
+            self.speed = 0
+                            
+        def get_speed(self):
+            return self.speed
+                            
+        def drive(self):
+            print(f"The {self.brand} {self.model} is driving at a speed of {self.speed}mph.")
+                            
+        def set_speed(self, speed):
+            self.speed = speed
+                            
+                            
+    class Sedan(Car):
+        def __init__(self, brand, model):
+            super().__init__(brand, model)
+            self.speed = 0
+                            
+        def get_speed(self):
+            return self.speed
+                            
+        def drive(self):
+            print(f"The {self.brand} {self.model} is moving at a speed of {self.speed}mph.")
+                            
+        def set_speed(self, speed):
+            self.speed = speed
+                            
+                            
+    model_X = SUV("Tesla", "Model X")
+    model_3 = Sedan("Tesla", "Model 3")
+                            
+    model_X.set_speed(55)
+    model_3.set_speed(70)
+                            
+    for car in (model_X, model_3):
+        car.info()
+        car.drive()
+                                </code>
+                            </pre>
                             <hr class="major" />
                         </section>
                         <section id="unit-6">
 
                             <h2 id="content">Unit 6: Abstract Methods and Interfaces</h2>
-                            <p>This is what I did for this unit.</p>
+                            <h3>Discuss the metrics used to assess the features of an object oriented program.</h3>
 
                             <hr class="major" />
                         </section>
@@ -166,8 +387,11 @@
 
                 <!-- Footer -->
                 <footer id="footer">
-                    <p class="copyright">&copy; Untitled. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-                    <p class="copyright"> &copy; Flaticon. Portfolio icon created by <a href="https://www.flaticon.com/free-icon/portfolio_1061440" title="portfolio icons">Freepik.</a></p>
+                    <p class="copyright">&copy; Untitled. All rights reserved. Design: <a
+                            href="https://html5up.net">HTML5 UP</a>.</p>
+                    <p class="copyright"> &copy; Flaticon. Portfolio favicon created by <a
+                            href="https://www.flaticon.com/free-icon/portfolio_1061440"
+                            title="portfolio icons">Freepik.</a></p>
                 </footer>
 
             </div>
