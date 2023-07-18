@@ -189,7 +189,7 @@
                             </ol>
                             <p>References: </p>
                             <p>Altvater, A. (2023) <em>What is SDLC? understand the software development life cycle,
-                                Stackify.</em> Available at: https://stackify.com/what-is-sdlc/</p>
+                                    Stackify.</em> Available at: https://stackify.com/what-is-sdlc/</p>
                             <p>Lange, C. F. J., Chaudron, M. R. V. & Muskens, J. (2006) In practice: UML software
                                 architecture and design description. <em>IEEE Software</em> 23(2): 40-46.</p>
 
@@ -321,20 +321,219 @@
                             <h2 id="content">Unit 6: Abstract Methods and Interfaces</h2>
                             <h3>Discuss the metrics used to assess the features of an object oriented program.</h3>
 
+                            <p> When assessing the features of an object-oriented program, several metrics are commonly
+                                employed to evaluate its quality, complexity, maintainability, and other aspects. These
+                                help people understand the codebase and make informed decisions for improvement.
+                                (Shaheen <em>et al.</em>, 2019). The following metrics are commonly employed to assess
+                                different aspects of the program: </p>
+
+                            <ul>
+                                <li> Size: Assessing the size such as population (number of classes and operations),
+                                    volume (dynamic object count), length (e.g., depth of inheritance), and
+                                    functionality (number of user functions), provide insights into the scale and scope
+                                    of the program. Smaller classes are easier to comprehend and maintain
+                                    (Henderson-Sellers, 1995).</li>
+
+                                <li> Cyclomatic Complexity: This metric calculates the number of independent paths
+                                    through the code, helping identify complex areas that may be error-prone and
+                                    challenging to understand. Lower complexity indicates simpler code (Jamali, 2006 &
+                                    Henderson-Sellers, 1995).</li>
+
+                                <li> Coupling: This quantifies the interdependence and interactions between classes.
+                                    Coupling metrics provide insights into the level of collaboration and communication
+                                    between classes (Jamali, 2006 & Henderson-Sellers, 1995).</li>
+
+                                <li>Cohesion: Cohesion metrics focus on how well a class's attributes and operations
+                                    align to achieve a single, well-defined purpose within the problem domain. High
+                                    cohesion implies that a class is focused, organized, and encapsulates related
+                                    responsibilities effectively (Jamali, 2006).</li>
+
+                                <li> Volatility: Volatility metrics assess the likelihood of changes occurring in the
+                                    design or implementation of a class. Classes with high volatility require frequent
+                                    modifications, highlighting areas that may require additional attention and
+                                    maintenance (Jamali, 2006).</li>
+
+                                <li> Sufficiency: It is used to assess the features of an object-oriented program and
+                                    evaluates whether a class has the necessary properties to solve the problem it is
+                                    required to solve. It aims to determine if the class adequately fulfils its intended
+                                    purpose and requirements (Jamali, 2006).</li>
+
+                                <li>Primitiveness: Primitiveness or simplicity metrics measure the extent to which class
+                                    operations cannot be composed from other operations. A class with high primitiveness
+                                    has simpler and more independent functionality (Jamali, 2006).</li>
+
+                                <li> Completeness: Evaluates whether a class reflects all the properties and aspects of
+                                    the problem domain, with the intention of enabling reuse (Jamali, 2006).</li>
+
+                                <li> Similarity: Compares the structure, function, and behaviour of two or more classes.
+                                    It helps identify similarities or differences between classes, helping with code
+                                    organization, design decisions, and potential reuse (Jamali, 2006).</li>
+
+                            </ul>
+
+                            <p>By using these metrics, we can gain insights into the strengths and weaknesses of
+                                object-oriented programs, identify areas for improvement, and make informed
+                                decisions to
+                                enhance the quality and maintainability. </p>
+
+                            <p>References:</p>
+
+                            <p> Henderson-Sellers, B., 1995. <em>Object-oriented metrics: measures of
+                                    complexity.</em>
+                                Prentice-Hall, Inc.. </p>
+
+                            <p> Jamali, S.M., 2006. Object oriented metrics. <em>A survey approach Technical report,
+                                    Department of Computer Engineering, Sharif University of Technology, Tehran,
+                                    Iran.</em></p>
+
+                            <p>Shaheen, A., Qamar, U., Nazir, A., Bibi, R., Ansar, M. and Zafar, I., 2020. Oocqm:
+                                object
+                                oriented code quality meter. <em>Computational Science/Intelligence and Applied
+                                    Informatics</em>, pp.149-163.</p>
+
+
+
+                            <h3> Develop a Python program which has three abstract methods and one subclass which
+                                allows
+                                a user to perform banking operations.</h3>
+                            <pre>
+                                <code>
+    from abc import ABC, abstractmethod
+
+    class Bank(ABC):
+        @abstractmethod
+        def deposit(self, amount):
+            pass
+                                            
+        @abstractmethod
+        def withdraw(self, amount):
+            pass
+                                            
+        @abstractmethod
+        def check_balance(self):
+            pass
+                                        
+    class SavingsAccount(Bank):
+        def __init__(self):
+            self.balance = 0
+                                            
+        def deposit(self, amount):
+            if amount > 0:
+                self.balance += amount
+                print(f"Deposited {amount} into the savings account.")
+            else:
+                print("Invalid amount. Please enter a positive value.")
+                                            
+        def withdraw(self, amount):
+            if amount > 0:
+                if self.balance >= amount:
+                    self.balance -= amount
+                    print(f"Withdrew {amount} from the savings account.")
+                else:
+                    print("Insufficient funds.")
+            else:
+                print("Invalid amount. Please enter a positive value.")
+                                            
+        def check_balance(self):
+            print(f"Current balance in the savings account: {self.balance}")
+                                        
+    account = SavingsAccount()
+                                        
+    account.deposit(100)
+    account.check_balance()
+    account.withdraw(50)
+    account.check_balance()
+    account.withdraw(100)
+    account.check_balance()
+    account.deposit(-10)                             
+                                </code>
+                            </pre>
+
                             <hr class="major" />
                         </section>
                         <section id="unit-7">
 
                             <h2 id="content">Unit 7: Debugging / Error Handling, Data Structures and Data Search</h2>
-                            <p>This is what I did for this unit.</p>
+                            <h3> Develop a Python program which has three abstract methods and one subclass which
+                                allows a user to perform banking operations.</h3>
+                            <pre>
+                                <code>
+    class Car:
+        def __init__(self):
+            self.car_data = {
+                'car1': {
+                    'make': 'Toyota',
+                    'model': 'Camry',
+                    'year': 2020,
+                    'color': 'Silver'
+                },
+                'car2': {
+                    'make': 'Honda',
+                    'model': 'Civic',
+                    'year': 2019,
+                    'color': 'Blue'
+                },
+                'car3': {
+                    'make': 'Ford',
+                    'model': 'Mustang',
+                    'year': 2021,
+                    'color': 'Red'
+                }
+            }
+                                    
+        def items(self):
+            return self.car_data.items()
+                                    
+        def keys(self):
+            return self.car_data.keys()
+                                    
+        def values(self):
+            return self.car_data.values()
+                                    
+    car_data = Car()
+                                    
+    print(car_data.items())
+    print(car_data.keys())
+    print(car_data.values())                          
+                                </code>
+                            </pre>
 
                             <hr class="major" />
                         </section>
                         <section id="unit-8">
 
                             <h2 id="content">Unit 8: Data Structures and Data Search in Practice</h2>
-                            <p>This is what I did for this unit.</p>
-
+                            <h3>Incorporate the following code into a Python program to handle exceptions.</h3>
+                            <pre>
+                                <code>
+    def handle_errors():
+        try:
+            # do something
+            number = int(input("Enter a number: "))
+            result = 10 / number
+            print("Result:", result)
+                                    
+        except ValueError:
+            # handle ValueError exception
+            print("Invalid input. Please enter a valid number.")
+                                    
+        except (TypeError, ZeroDivisionError):
+            # handle multiple exceptions (TypeError and ZeroDivisionError)
+            print("An error occurred during the calculation.")
+                                    
+        except Exception as e:
+            # handle all other exceptions
+            print("An exception occurred:", str(e))
+                                    
+    def main():
+        # Call the method that handles errors
+        handle_errors()
+                                    
+    # Entry point of the program
+    if __name__ == "__main__":
+        main()
+                            </code>
+                        </pre>
                             <hr class="major" />
                         </section>
                         <section id="unit-9">
