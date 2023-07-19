@@ -46,11 +46,17 @@
                         <li><a href="#unit-6">Unit 6: Abstract Methods and Interfaces</a></li>
                         <li><a href="#unit-7">Unit 7: Debugging / Error Handling, Data Structures and Data Search</a>
                         </li>
+                        <li><a href="#system-design" style="color: #009ffe">Summative Assessment: System Design</a></li>
                         <li><a href="#unit-8">Unit 8: Data Structures and Data Search in Practice</a></li>
                         <li><a href="#unit-9">Unit 9: Packaging and Testing</a></li>
                         <li><a href="#unit-10">Unit 10: Testing Code in Practice</a></li>
                         <li><a href="#unit-11">Unit 11: Pointers, References & Memory, and Design Patterns</a></li>
+                        <li><a href="#system-impl" style="color: #009ffe">Summative Assessment: System
+                                Implementation</a></li>
                         <li><a href="#unit-12">Unit 12: Working with Design Patterns to Structure Code</a></li>
+                        <li><a href="#ePortfolio" style="color: #009ffe">Summative Assessment: e-Portfolio
+                                Submission</a></li>
+
                     </ul>
 
                     <hr class="major" />
@@ -82,33 +88,33 @@
                             <br />
                             <pre>
                                 <code>
-    class User:
-        def __init__(self, username, password):
-            self.username = username  # Unprotected variable
-            self._password = password  # Protected variable
-                                    
-        def login(self, username, password):
-            if self.username == username and self._password == password:
-                print("Login successful!")
-            else:
-                print("Invalid username or password.")
-                                    
-    # Create a User instance
-    user = User("myusername", "mypassword")
-                                    
-    # Access and modify the username (unprotected)
-    print(user.username)
-    user.username = "newusername"
-    print(user.username)
-                                    
-    # Access and modify the password (protected)
-    print(user._password)
-    user._password = "newpassword"
-    print(user._password)
-                                    
-    # Attempt login
-    user.login("myusername", "mypassword")
-    user.login("myusername", "wrongpassword")
+class User:
+    def __init__(self, username, password):
+        self.username = username  # Unprotected variable
+        self._password = password  # Protected variable
+                                
+    def login(self, username, password):
+        if self.username == username and self._password == password:
+            print("Login successful!")
+        else:
+            print("Invalid username or password.")
+                                
+# Create a User instance
+user = User("myusername", "mypassword")
+                                
+# Access and modify the username (unprotected)
+print(user.username)
+user.username = "newusername"
+print(user.username)
+                                
+# Access and modify the password (protected)
+print(user._password)
+user._password = "newpassword"
+print(user._password)
+                                
+# Attempt login
+user.login("myusername", "mypassword")
+user.login("myusername", "wrongpassword")
                                 </code>
                             </pre>
                             <hr class="major" />
@@ -220,32 +226,32 @@
                             <br />
                             <pre>
                                 <code>
-    class Employee:
-        def __init__(self, emp_no, name, leave_balance):
-            self.emp_no = emp_no
-            self.name = name
-            self.leave_balance = leave_balance
-                            
-        def book_leave(self, num_days):
-            if self.leave_balance >= num_days:
-                self.leave_balance -= num_days
-                print(f"Successfully booked {num_days} day(s) of leave. Your updated leave balance is {self.leave_balance} day(s).")
-            else:
-                print("Insufficient leave balance.")
-                            
-    # Create Employee
-    employee1 = Employee(1, "Adesola", 7)
-                            
-    # Employee Details
-    print("Employee Details:")
-    print("Employee Number:", employee1.emp_no)
-    print("Name:", employee1.name)
-    print("Leave Balance:", employee1.leave_balance, "day(s)")
-                            
-    # Book Leave
-    print("\nBooking Leave:")
-    num_days = int(input("Enter the number of days of leave you want to book: "))
-    employee1.book_leave(num_days)
+class Employee:
+    def __init__(self, emp_no, name, leave_balance):
+        self.emp_no = emp_no
+        self.name = name
+        self.leave_balance = leave_balance
+                        
+    def book_leave(self, num_days):
+        if self.leave_balance >= num_days:
+            self.leave_balance -= num_days
+            print(f"Successfully booked {num_days} day(s) of leave. Your updated leave balance is {self.leave_balance} day(s).")
+        else:
+            print("Insufficient leave balance.")
+                        
+# Create Employee
+employee1 = Employee(1, "Adesola", 7)
+                        
+# Employee Details
+print("Employee Details:")
+print("Employee Number:", employee1.emp_no)
+print("Name:", employee1.name)
+print("Leave Balance:", employee1.leave_balance, "day(s)")
+                        
+# Book Leave
+print("\nBooking Leave:")
+num_days = int(input("Enter the number of days of leave you want to book: "))
+employee1.book_leave(num_days)
                             </code>
                         </pre>
                             <hr class="major" />
@@ -258,60 +264,60 @@
                             <br />
                             <pre>
                                 <code>
-    class Car:
-        def __init__(self, brand, model):
-            self.brand = brand
-            self.model = model
-                            
-        def info(self):
-            print(f"I am a {self.brand} {self.model}.")
-                            
-        def get_speed(self):
-            pass
-                            
-        def drive(self):
-            print("The car is driving.")
-                            
-                            
-    class SUV(Car):
-        def __init__(self, brand, model):
-            super().__init__(brand, model)
-            self.speed = 0
-                            
-        def get_speed(self):
-            return self.speed
-                            
-        def drive(self):
-            print(f"The {self.brand} {self.model} is driving at a speed of {self.speed}mph.")
-                            
-        def set_speed(self, speed):
-            self.speed = speed
-                            
-                            
-    class Sedan(Car):
-        def __init__(self, brand, model):
-            super().__init__(brand, model)
-            self.speed = 0
-                            
-        def get_speed(self):
-            return self.speed
-                            
-        def drive(self):
-            print(f"The {self.brand} {self.model} is moving at a speed of {self.speed}mph.")
-                            
-        def set_speed(self, speed):
-            self.speed = speed
-                            
-                            
-    model_X = SUV("Tesla", "Model X")
-    model_3 = Sedan("Tesla", "Model 3")
-                            
-    model_X.set_speed(55)
-    model_3.set_speed(70)
-                            
-    for car in (model_X, model_3):
-        car.info()
-        car.drive()
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+                        
+    def info(self):
+        print(f"I am a {self.brand} {self.model}.")
+                        
+    def get_speed(self):
+        pass
+                        
+    def drive(self):
+        print("The car is driving.")
+                        
+                        
+class SUV(Car):
+    def __init__(self, brand, model):
+        super().__init__(brand, model)
+        self.speed = 0
+                        
+    def get_speed(self):
+        return self.speed
+                        
+    def drive(self):
+        print(f"The {self.brand} {self.model} is driving at a speed of {self.speed}mph.")
+                        
+    def set_speed(self, speed):
+        self.speed = speed
+                        
+                        
+class Sedan(Car):
+    def __init__(self, brand, model):
+        super().__init__(brand, model)
+        self.speed = 0
+                        
+    def get_speed(self):
+        return self.speed
+                        
+    def drive(self):
+        print(f"The {self.brand} {self.model} is moving at a speed of {self.speed}mph.")
+                        
+    def set_speed(self, speed):
+        self.speed = speed
+                        
+                        
+model_X = SUV("Tesla", "Model X")
+model_3 = Sedan("Tesla", "Model 3")
+                        
+model_X.set_speed(55)
+model_3.set_speed(70)
+                        
+for car in (model_X, model_3):
+    car.info()
+    car.drive()
                                 </code>
                             </pre>
                             <hr class="major" />
@@ -391,61 +397,59 @@
                                 oriented code quality meter. <em>Computational Science/Intelligence and Applied
                                     Informatics</em>, pp.149-163.</p>
 
-
-
                             <h3> Develop a Python program which has three abstract methods and one subclass which
                                 allows
                                 a user to perform banking operations.</h3>
                             <pre>
                                 <code>
-    from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod
 
-    class Bank(ABC):
-        @abstractmethod
-        def deposit(self, amount):
-            pass
-                                            
-        @abstractmethod
-        def withdraw(self, amount):
-            pass
-                                            
-        @abstractmethod
-        def check_balance(self):
-            pass
+class Bank(ABC):
+    @abstractmethod
+    def deposit(self, amount):
+        pass
                                         
-    class SavingsAccount(Bank):
-        def __init__(self):
-            self.balance = 0
-                                            
-        def deposit(self, amount):
-            if amount > 0:
-                self.balance += amount
-                print(f"Deposited {amount} into the savings account.")
+    @abstractmethod
+    def withdraw(self, amount):
+        pass
+                                        
+    @abstractmethod
+    def check_balance(self):
+        pass
+                                    
+class SavingsAccount(Bank):
+    def __init__(self):
+        self.balance = 0
+                                        
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+            print(f"Deposited {amount} into the savings account.")
+        else:
+            print("Invalid amount. Please enter a positive value.")
+                                        
+    def withdraw(self, amount):
+        if amount > 0:
+            if self.balance >= amount:
+                self.balance -= amount
+                print(f"Withdrew {amount} from the savings account.")
             else:
-                print("Invalid amount. Please enter a positive value.")
-                                            
-        def withdraw(self, amount):
-            if amount > 0:
-                if self.balance >= amount:
-                    self.balance -= amount
-                    print(f"Withdrew {amount} from the savings account.")
-                else:
-                    print("Insufficient funds.")
-            else:
-                print("Invalid amount. Please enter a positive value.")
-                                            
-        def check_balance(self):
-            print(f"Current balance in the savings account: {self.balance}")
+                print("Insufficient funds.")
+        else:
+            print("Invalid amount. Please enter a positive value.")
                                         
-    account = SavingsAccount()
-                                        
-    account.deposit(100)
-    account.check_balance()
-    account.withdraw(50)
-    account.check_balance()
-    account.withdraw(100)
-    account.check_balance()
-    account.deposit(-10)                             
+    def check_balance(self):
+        print(f"Current balance in the savings account: {self.balance}")
+                                    
+account = SavingsAccount()
+                                    
+account.deposit(100)
+account.check_balance()
+account.withdraw(50)
+account.check_balance()
+account.withdraw(100)
+account.check_balance()
+account.deposit(-10)                             
                                 </code>
                             </pre>
 
@@ -454,50 +458,77 @@
                         <section id="unit-7">
 
                             <h2 id="content">Unit 7: Debugging / Error Handling, Data Structures and Data Search</h2>
-                            <h3> Develop a Python program which has three abstract methods and one subclass which
-                                allows a user to perform banking operations.</h3>
+                            <h3> Create a nested dictionary of data on cars within a Car class. Extend the program to
+                                work with the dictionary by calling the following methods:</h3>
+                            <h3>
+                                <ul>
+                                    <li>items()</li>
+                                    <li>keys()</li>
+                                    <li>values()</li>
+                                </ul>
+                            </h3>
                             <pre>
                                 <code>
-    class Car:
-        def __init__(self):
-            self.car_data = {
-                'car1': {
-                    'make': 'Toyota',
-                    'model': 'Camry',
-                    'year': 2020,
-                    'color': 'Silver'
-                },
-                'car2': {
-                    'make': 'Honda',
-                    'model': 'Civic',
-                    'year': 2019,
-                    'color': 'Blue'
-                },
-                'car3': {
-                    'make': 'Ford',
-                    'model': 'Mustang',
-                    'year': 2021,
-                    'color': 'Red'
-                }
+class Car:
+    def __init__(self):
+        self.car_data = {
+            'car1': {
+                'make': 'Toyota',
+                'model': 'Camry',
+                'year': 2020,
+                'color': 'Silver'
+            },
+            'car2': {
+                'make': 'Honda',
+                'model': 'Civic',
+                'year': 2019,
+                'color': 'Blue'
+            },
+            'car3': {
+                'make': 'Ford',
+                'model': 'Mustang',
+                'year': 2021,
+                'color': 'Red'
             }
-                                    
-        def items(self):
-            return self.car_data.items()
-                                    
-        def keys(self):
-            return self.car_data.keys()
-                                    
-        def values(self):
-            return self.car_data.values()
-                                    
-    car_data = Car()
-                                    
-    print(car_data.items())
-    print(car_data.keys())
-    print(car_data.values())                          
+        }
+                                
+    def items(self):
+        return self.car_data.items()
+                                
+    def keys(self):
+        return self.car_data.keys()
+                                
+    def values(self):
+        return self.car_data.values()
+                                
+car_data = Car()
+                                
+print(car_data.items())
+print(car_data.keys())
+print(car_data.values())                          
                                 </code>
                             </pre>
 
+                            <hr class="major" />
+                        </section>
+                        <section id="system-design">
+                            <h2 id="content">Summative Assessment: System Design</h2>
+                            <h3>A Design Proposal of Software to Support Operation of a Driverless Car
+                            </h3>
+                            <p>As a Software Engineer, you are given the role of designing the software which supports
+                                the operation of a self-driving car. In your research around the capabilities of
+                                self-driving cars, you can search for keywords that include autonomous vehicle,
+                                driverless car, robotic car.<br /><br />You are required to identify three operations
+                                that you
+                                wish to support in your software and provision capability for them through the use of an
+                                object-oriented Python program. The system should support the ability for a customer to
+                                interact with the system through a front-end.<br /><br />Running in the system back-end
+                                should be a capability that simulates the generation and
+                                collection of data attributes that represent the wider environment within which the
+                                driverless car is operating.
+                            </p>
+                            <h3>My Evaluation</h3>
+                            <p>Going into this assignment </p>
                             <hr class="major" />
                         </section>
                         <section id="unit-8">
@@ -506,32 +537,53 @@
                             <h3>Incorporate the following code into a Python program to handle exceptions.</h3>
                             <pre>
                                 <code>
-    def handle_errors():
-        try:
-            # do something
-            number = int(input("Enter a number: "))
-            result = 10 / number
-            print("Result:", result)
-                                    
-        except ValueError:
-            # handle ValueError exception
-            print("Invalid input. Please enter a valid number.")
-                                    
-        except (TypeError, ZeroDivisionError):
-            # handle multiple exceptions (TypeError and ZeroDivisionError)
-            print("An error occurred during the calculation.")
-                                    
-        except Exception as e:
-            # handle all other exceptions
-            print("An exception occurred:", str(e))
-                                    
-    def main():
-        # Call the method that handles errors
-        handle_errors()
-                                    
-    # Entry point of the program
-    if __name__ == "__main__":
-        main()
+try:
+    # do something
+    pass
+    
+    except ValueError:
+    # handle ValueError exception
+    pass
+    
+    except (TypeError, ZeroDivisionError):
+    # handle multiple exceptions
+    # TypeError and ZeroDivisionError
+    pass
+    
+    except:
+    # handle all other exceptions
+    pass
+                                </code>
+                            </pre>
+                            <p>My Answer:</p>
+                            <pre>
+                                <code>
+def handle_errors():
+    try:
+        # do something
+        number = int(input("Enter a number: "))
+        result = 10 / number
+        print("Result:", result)
+                                
+    except ValueError:
+        # handle ValueError exception
+        print("Invalid input. Please enter a valid number.")
+                                
+    except (TypeError, ZeroDivisionError):
+        # handle multiple exceptions (TypeError and ZeroDivisionError)
+        print("An error occurred during the calculation.")
+                                
+    except Exception as e:
+        # handle all other exceptions
+        print("An exception occurred:", str(e))
+                                
+def main():
+    # Call the method that handles errors
+    handle_errors()
+                                
+# Entry point of the program
+if __name__ == "__main__":
+    main()
                             </code>
                         </pre>
                             <hr class="major" />
@@ -539,28 +591,249 @@
                         <section id="unit-9">
 
                             <h2 id="content">Unit 9: Packaging and Testing</h2>
-                            <p>This is what I did for this unit.</p>
+                            <h3>Extend the following program to test accuracy of operations using the assert statement.
+                            </h3>
+                            <pre>
+                                <code>
+# Python String Operations
+str1 = 'Hello'
+str2 ='World!'
+
+# using +
+print('str1 + str2 = ', str1 + str2)
+
+# using *
+print('str1 * 3 =', str1 * 3)
+                                </code>
+                            </pre>
+                            <p>My Answer:</p>
+                            <pre>
+                                <code>
+# Python String Operations
+str1 = 'Hello'
+str2 = 'World!'
+
+# using +
+result1 = str1 + str2
+print('str1 + str2 =', result1)
+
+# using *
+result2 = str1 * 3
+print('str1 * 3 =', result2)
+
+# Testing accuracy using assert statements
+assert result1 == 'HelloWorld!', "Error in addition calculation."
+assert result2 == 'HelloHelloHello', "Error in multiplication calculation."
+                            </code>
+                        </pre>
 
                             <hr class="major" />
                         </section>
                         <section id="unit-10">
 
                             <h2 id="content">Unit 10: Testing Code in Practice</h2>
-                            <p>This is what I did for this unit.</p>
+                            <h3>In ‘Packaging & Testing’ (unit 9), we examined the use of documentation to support code
+                                developments. Add appropriate commenting and documentation for the code below.</h3>
+                            <pre>
+                                <code>
+def add(x, y): 
+return x + y 
+def subtract(x, y): 
+return x - y 
+def multiply(x, y): 
+return x * y 
+def divide(x, y): 
+return x / y 
+print("Select operation.") 
+print("1.Add") 
+print("2.Subtract") 
+print("3.Multiply") 
+print("4.Divide") 
+while True: 
+choice = input("Enter choice(1/2/3/4): ")  
+if choice in ('1', '2', '3', '4'): 
+num1 = float(input("Enter first number: ")) 
+num2 = float(input("Enter second number: ")) 
+if choice == '1': print(num1, "+", num2, "=", add(num1, num2)) 
+elif choice == '2': print(num1, "-", num2, "=", subtract(num1, num2)) 
+elif choice == '3': print(num1, "*", num2, "=", multiply(num1, num2)) 
+elif choice == '4': print(num1, "/", num2, "=", divide(num1, num2)) 
+    break the while loop if answer is no next_calculation = input("Let's do next calculation? (yes/no): ") 
+if next_calculation == "no": 
+break 
+else: print("Invalid Input")                                    
+                                </code>
+                            </pre>
+                            <p>My Answer:</p>
+                            <pre>
+                                <code>
+# Calculator program
+
+# Addition function
+def add(x, y):
+    return x + y
+
+# Subtraction function
+def subtract(x, y):
+    return x - y
+
+# Multiplication function
+def multiply(x, y):
+    return x * y
+
+# Division function
+def divide(x, y):
+    return x / y
+
+# Printed list of functions
+print("Select operation.")
+print("1. Add")
+print("2. Subtract")
+print("3. Multiply")
+print("4. Divide")
+
+while True:
+    # Ask the user to choose an operation
+    choice = input("Enter choice (1/2/3/4): ")
+    
+    # Check if user's choice is valid
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("Enter first number: "))  # Get the first number
+        num2 = float(input("Enter second number: "))  # Get the second number
+
+        # Perform the selected operation based on user's choice
+        if choice == '1':
+            print(num1, "+", num2, "=", add(num1, num2))
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+        elif choice == '4':
+            # Handle division by zero
+            if num2 != 0:
+                print(num1, "/", num2, "=", divide(num1, num2))
+            else:
+                print("Cannot divide by zero.")
+        
+        # Break the while loop if the user does not want to do another calculation
+        next_calculation = input("Let's do the next calculation? (yes/no): ")
+        if next_calculation.lower() == "no":
+            break
+    else:
+        print("Invalid Input")
+                                </code>
+                            </pre>
+                            <h3>Integrate unit tests into the code in Activity 2 to test operation of the methods.</h3>
+                            <p>I would add this code to the Calculator program:</p>
+                            <pre>
+                                <code>
+import unittest
+
+class TestCalculator(unittest.TestCase):
+
+    def test_addition(self):
+        # Test positive numbers
+        self.assertEqual(add(2, 9), 11)
+
+        # Test negative numbers
+        self.assertEqual(add(-4, -6), -10)
+
+        # Test a positive and negative number
+        self.assertEqual(add(-2, 9), 7)
+
+    def test_subtraction(self):
+        # Test positive numbers
+        self.assertEqual(subtract(12, 7), 5)
+
+        # Test negative numbers
+        self.assertEqual(subtract(-10, -5), -5)
+
+        # Test positive and negative number
+        self.assertEqual(subtract(11, -4), 15)
+
+    def test_multiplication(self):
+        # Test positive numbers
+        self.assertEqual(multiply(2, 8), 16)
+
+        # Test negative numbers
+        self.assertEqual(multiply(-6, -2), 12)
+
+        # Test a positive and negative number
+        self.assertEqual(multiply(-9, 7), -63)
+
+    def test_division(self):
+        # Test division with positive numbers
+        self.assertEqual(divide(12, 2), 6)
+
+        # Test division with a negative numerator
+        self.assertEqual(divide(-15, 5), -3)
+
+        # Test division with a negative denominator
+        self.assertEqual(divide(21, -3), -7)
+
+        # Test division with negative numbers
+        self.assertEqual(divide(-24, -6), 4)
+
+        # Test division with zero as the numerator
+        self.assertEqual(divide(0, 8), 0)
+
+        # Test division by zero
+        with self.assertRaises(ZeroDivisionError):
+            divide(5, 0)
+                                </code>
+                            </pre>
 
                             <hr class="major" />
                         </section>
                         <section id="unit-11">
 
                             <h2 id="content">Unit 11: Pointers, References & Memory, and Design Patterns</h2>
-                            <p>This is what I did for this unit.</p>
+                            <p>We weren't given any ePortfolio work or seminar preparation to do, as the System
+                                Implementation of a Driverless Car was due this week, so I spent the week completing
+                                that.</p>
 
+                            <hr class="major" />
+                        </section>
+                        <section id="system-impl">
+                            <h2 id="content">Summative Assessment: System Implementation</h2>
+                            <h3>Implement the code designed to support the operation of a driverless
+                                car
+                            </h3>
                             <hr class="major" />
                         </section>
                         <section id="unit-12">
 
                             <h2 id="content">Unit 12: Working with Design Patterns to Structure Code</h2>
-                            <p>This is what I did for this unit.</p>
+                            <h3>Read Zhang & Budgen (2012). Which design patterns are used most commonly, and why?</h3>
+                            <p>
+                                The design patterns that are most commonly used in software design are Composite,
+                                Observer, and Visitor. These patterns are popular because they are versatile
+                                and therefore are used in many software development projects. They have a
+                                significant impact on how software systems are structured and designed when
+                                implemented.
+                            </p>
+                            <p>
+                                One reason why The Gang of Four (GoF) patterns, which includes (Composite, Observer, and
+                                Visitor) are the most commonly used is because they come with detailed guidelines and
+                                examples. The GoF patterns are also widely used because they offer well-established and
+                                proven solutions to common design problems that software developers can often encounter.
+                                By using design patterns, they can improve code reusability, maintainability, and
+                                scalability which means more flexible software systems.
+                            </p>
+                            <p>References: </p>
+                            <p>Zhang, C. & Budgen, D. (2012) What Do We Know about the Effectiveness of Software Design
+                                Patterns? in <em>IEEE Transactions on Software Engineering</em> 38(5): 1213-1231. DOI:
+                                10.1109/TSE.2011.79.
+                            </p>
+                            <hr class="major" />
+                        </section>
+                        <section id="ePortfolio">
+                            <h2 id="content">Summative Assessment: e-Portfolio Submission</h2>
+                            <h3>Reflection on Object-Orientated Programming based on what you have
+                                learned in this module, your work in the module and the impact on your
+                                professional/personal development.
+                            </h3>
+                            <hr class="major" />
                         </section>
             </div>
         </div>
