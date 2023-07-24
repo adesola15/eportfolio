@@ -83,9 +83,7 @@
                             <p>Di Silvestro, F., & Nadir, M. (2021). The Power of ePortfolio Development to Foster
                                 Reflective and Deeper Learning in an Online Graduate Adult Education Program. <em> Adult
                                     Learning </em>, 32(4), 154-164.</p>
-                            <br />
                             <h3> Develop a Python program and apply protected and unprotected variables within it. </h3>
-                            <br />
                             <pre>
                                 <code>
 class User:
@@ -117,6 +115,13 @@ user.login("myusername", "mypassword")
 user.login("myusername", "wrongpassword")
                                 </code>
                             </pre>
+                            <h3>My Analysis</h3>
+                            <p>The use of both unprotected (username) and protected (_password) variables show the
+                                importance of data security and information hiding in real-world applications. I have
+                                also learnt the significance of using a single leading underscore convention to show
+                                protected variables, even though they are still accessible outside the class. This
+                                exercise broadened my understanding of class design, data abstraction and access control
+                                in object-oriented programming.</p>
                             <hr class="major" />
 
                         </section>
@@ -142,7 +147,11 @@ user.login("myusername", "wrongpassword")
                             <h3>Create a use case model which captures the ways in which a user needs to interact with
                                 the software system.</h3>
                             <span class="image main"><img src="images\Driverless Taxi Use Case UML.png" alt="" /></span>
-
+                            <h3>My Analysis</h3>
+                            <p> Creating this model challenged me to think critically about what steps are taken during
+                                real-world usage of a driverless taxi. I had to consider what systems would be used from
+                                the start, during and the end of the journey. I had to put myself in the mind of a user
+                                and this helped me understand why use cases are important when designing software.</p>
 
                             <hr class="major" />
                         </section>
@@ -203,6 +212,14 @@ user.login("myusername", "wrongpassword")
                                 the State Machine Diagram in Figure 3-7 to design a similar model for a washing machine.
                             </h3>
                             <span class="image main"><img src="images\Washing Machine UML.png" alt="" /></span>
+                            <h3>My Analysis</h3>
+                            <p> Creating a State Machine Diagram for a washing machine cycle was a good practical
+                                application of my object-oriented programming knowledge which helped me appreciate the
+                                importance of systematic modelling and design in software development. Breaking down the
+                                washing machine cycle into distinct states took some research but helped me visualise
+                                the entire process. Each state represented a specific stage of the washing process, and
+                                transitions denoted the conditions triggering state changes.
+                            </p>
 
 
                             <hr class="major" />
@@ -215,7 +232,6 @@ user.login("myusername", "wrongpassword")
                                 user’s behaviour within the driverless car.</h3>
                             <span class="image main"><img src="images\Driverless Taxi Activity UML.png" alt="" /></span>
 
-
                             <h3>Expand upon the activity diagram with the development of a class diagram using UML to
                                 support a system with basic employee-related functionality. This should include the
                                 retention of employee details and allowing an employee to book a day of annual leave.
@@ -223,7 +239,6 @@ user.login("myusername", "wrongpassword")
                             <span class="image main"><img src="images\Employee Class UML.png" alt="" /></span>
 
                             <h3>Develop the Python program to implement the class model.</h3>
-                            <br />
                             <pre>
                                 <code>
 class Employee:
@@ -254,6 +269,16 @@ num_days = int(input("Enter the number of days of leave you want to book: "))
 employee1.book_leave(num_days)
                             </code>
                         </pre>
+                            <h3>My Analysis</h3>
+                            <p> By implementing the Employee class, I practiced encapsulation and data organisation,
+                                which helps in the management of employee-related data. The book_leave method lets users
+                                to request leave whilst making sure that their leave balance is sufficient. The code
+                                follows good coding practices by using clear and descriptive variable names and
+                                providing meaningful feedback to employees when they are booking leave. As well as this,
+                                the code uses user input validation by converting the input into an integer. Overall,
+                                this exercise reinforces the importance of object-oriented principles and how they allow
+                                for the creation of organised and user-friendly software systems.</p>
+
                             <hr class="major" />
                         </section>
                         <section id="unit-5">
@@ -261,7 +286,6 @@ employee1.book_leave(num_days)
                             <h2 id="content">Unit 5: More on Classes</h2>
                             <h3>Write a Python program with polymorphism that is usable within the summative assessment
                                 for the driverless car.</h3>
-                            <br />
                             <pre>
                                 <code>
 class Car:
@@ -320,6 +344,15 @@ for car in (model_X, model_3):
     car.drive()
                                 </code>
                             </pre>
+                            <h3>My Analysis</h3>
+                            <p>The Car class and its subclasses SUV and Sedan demonstrate inheritance and polymorphism,
+                                and they allowed me to reuse code and create specialised car types. The code
+                                demonstrates how encapsulation works and ensures the appropriate management of
+                                properties like speed for different car types. The code models different car types and
+                                their functionalities and shows the power of object-oriented design in representing
+                                real-world examples. It taught me the importance of designing classes with well-defined
+                                methods and properties to create scalable and maintainable software systems.</p>
+
                             <hr class="major" />
                         </section>
                         <section id="unit-6">
@@ -452,7 +485,13 @@ account.check_balance()
 account.deposit(-10)                             
                                 </code>
                             </pre>
-
+                            <h3>My Analysis</h3>
+                            <p> Through this code I was able to apply concept of abstract classes and abstract methods
+                                through the Bank class, and shows the importance of defining common interfaces for
+                                subclasses to implement. The SavingsAccount class shows how inheritance allows for code
+                                reuse, and allows for the creation of bank account functionalities whilst using the
+                                abstract methods defined in the parent class. The code uses best practices by validating
+                                user inputs in methods like deposit and withdraw.</p>
                             <hr class="major" />
                         </section>
                         <section id="unit-7">
@@ -508,7 +547,15 @@ print(car_data.keys())
 print(car_data.values())                          
                                 </code>
                             </pre>
-
+                            <h3>My Analysis</h3>
+                            <p> This code uses a class to store car data in a nested dictionary so that data is
+                                encapsulated within the Car class and the code shows the principles of data hiding and
+                                abstraction. The methods items(), keys(), and values() allow easy access to the car data
+                                whilst maintaining encapsulation. The items() method returned key-value pairs, keys()
+                                returned the car IDs, and values() returned the car details as values. This exercise
+                                helped me develop my knowledge of class design and the importance of organising data in
+                                a structured way. It also highlights the importance of using class methods to interact
+                                with class data whilst protecting it from direct manipulation outside the class.</p>
                             <hr class="major" />
                         </section>
                         <section id="system-design">
@@ -607,6 +654,11 @@ if __name__ == "__main__":
     main()
                             </code>
                         </pre>
+                        <h3>My Analysis</h3>
+                            <p>The code that incorporates the first code shows how to handle different types of
+                                exceptions gracefully and makes sure that the program remains robust and user-friendly.
+                                I was able to handle multiple exceptions in a single block, making the error-handling
+                                process less bulky.</p>
                             <hr class="major" />
                         </section>
                         <section id="unit-9">
@@ -647,7 +699,12 @@ assert result1 == 'HelloWorld!', "Error in addition calculation."
 assert result2 == 'HelloHelloHello', "Error in multiplication calculation."
                             </code>
                         </pre>
-
+                        <h3>My Analysis</h3>
+                            <p>Using assert statements to test the results makes sure the code is accurate in its
+                                calculations, which provides valuable feedback during testing. This exercise helped me
+                                understand the basic concepts of string manipulation in Python and made me understand
+                                the importance of testing code for correctness. It was also a practical way to learn
+                                about string operations.</p>
                             <hr class="major" />
                         </section>
                         <section id="unit-10">
@@ -803,7 +860,16 @@ class TestCalculator(unittest.TestCase):
             divide(5, 0)
                                 </code>
                             </pre>
-
+                            <h3>My Analysis</h3>
+                            <p>I used the unittest module to perform unit testing on the calculator's four basic
+                                operations (addition, subtraction, multiplication, and division). Each test case covered
+                                different scenarios, including positive, negative, and zero values. The test cases give
+                                feedback to make sure that the calculator functions produce the expected results. Using
+                                assertEqual statements to compare actual and expected outcomes showed me the importance
+                                of testing for correctness and handling differebt scenarios. This exercise taught me the
+                                importance of thorough testing and validation in software development, and the
+                                importance of testing edge cases and potential error scenarios. It also highlighted the
+                                use of exceptions like ZeroDivisionError to verify specific error conditions.</p>
                             <hr class="major" />
                         </section>
                         <section id="unit-11">
@@ -841,21 +907,24 @@ class TestCalculator(unittest.TestCase):
                                 thought Traffic Light Detection would be the most difficult to code as I was thinking
                                 about how traffic lights transition from green to amber to red to amber to green, and
                                 wondered how I would code that, but I ultimately decided to just generate random colours
-                                and deal with them seperately as it would still follow UML diagrams doing it this way.</p>
-                            <p>    
-                                I think with extra time it would be interesting to implement this, but I still hit the 
-                                requirements doing it the easier way. Something this assignment has taught me is learning
+                                and deal with them seperately as it would still follow UML diagrams doing it this way.
+                            </p>
+                            <p>
+                                I think with extra time it would be interesting to implement this, but I still hit the
+                                requirements doing it the easier way. Something this assignment has taught me is
+                                learning
                                 to balance the time I have with the work I aim to produce. I will always try to produce
-                                the best code I can but its important to be realistic as I do have a full time job, so I 
+                                the best code I can but its important to be realistic as I do have a full time job, so I
                                 think aiming to hit the learning objectives is a better goal.</p>
-                            <p>    
-                                The most frustrating part of the project was actually the Adaptive Cruise Control as I 
-                                forgot to send the speed from the Obstacle Detector class to the Obstacle Avoidance class
-                                so the speeds being outputted were random. It took me a while to pick up on this but I 
-                                managed to debug it in the end which was a good experience as I know what to expect when 
+                            <p>
+                                The most frustrating part of the project was actually the Adaptive Cruise Control as I
+                                forgot to send the speed from the Obstacle Detector class to the Obstacle Avoidance
+                                class
+                                so the speeds being outputted were random. It took me a while to pick up on this but I
+                                managed to debug it in the end which was a good experience as I know what to expect when
                                 debugging code going forward.
                             </p>
-                            <p> Overall I enjoyed this assignment and found it pleasantly challenging. I was also happy 
+                            <p> Overall I enjoyed this assignment and found it pleasantly challenging. I was also happy
                                 with my final mark I recieved and felt it reflected the effort I put into the program.
                             </p>
                             <hr class="major" />
@@ -892,6 +961,85 @@ class TestCalculator(unittest.TestCase):
                                 learned in this module, your work in the module and the impact on your
                                 professional/personal development.
                             </h3>
+                            <p>When I first started this module, I found it more intensive than the last module which
+                                was a surprise to me as I expected the workload to be similar to what I had been
+                                previously doing. However, I have learned a lot and produced work I am proud of,
+                                particularly my final assignment and my ePortfolio which I have refined a lot. My
+                                academic background is not in computer science, so I was a bit worried about having to
+                                design and implement a program from scratch, but in the end I am happy with the
+                                assignments I was given as they forced me to learn at a pace that was quicker than I
+                                thought I could. </p>
+                            <p>Throughout this module, I have gained an understanding of the principles and practices of
+                                object-oriented programming and have had the opportunity to apply this knowledge in
+                                creating a driverless car program. Before this module, I only had a basic understanding
+                                of object-oriented programming concepts, such as classes, objects and inheritance.
+                                However, this module provided me with a more in-depth understanding of these principles
+                                and their practical applications. I learned how to design classes and objects, how to
+                                establish relationships between them using inheritance and composition, and how to
+                                achieve data hiding and abstraction through encapsulation as well as how polymorphism
+                                features in programs (Phillips, 2018). I was previously completely unfamiliar with UML
+                                diagrams but now I understand how to create them, and I understand how they can be
+                                useful to developers when writing software, especially more complex systems (Rumbaugh
+                                <em>et al.</em>, 2004).
+                            </p>
+                            <p>Completing this module has strengthened my critical-thinking skills. Developing the
+                                driverless car program required creative thinking and the ability to break down complex
+                                problems into manageable components. By overcoming various challenges during the
+                                development process, I have gained confidence in my abilities as a software developer.
+                                The principles I learnt during the seminars and ePortfolio tasks have allowed me to
+                                design maintainable applications. I am now confident in my ability to model systems
+                                using classes, objects, and their relationships, leading to more efficient
+                                problem-solving skills.
+                            </p>
+                            <p>Also, this module has improved my proficiency in Python, one of the most popular and
+                                versatile programming languages which I have always been interested in learning. As I
+                                simulated real-world scenarios in Python throughout the module, I became more
+                                comfortable with its syntax, data structures, and object-oriented features (Reitz,
+                                2016). This expertise in Python opens up numerous opportunities to learn more about
+                                various topics, such as web development, data analysis, and machine learning.
+                            </p>
+                            <p>Just as important as the practical skills I have learnt is the personal development I
+                                have made. There were times in this module where I was stressed due to the learning
+                                curve I had to go through alongside working full time and managing my personal
+                                commitments. However, I took the approach of ‘just getting on with it’ by carving out
+                                time to do my work and not allowing anything to distract from it, and in that way the
+                                work almost became therapeutic as it felt good to focus on one thing. I know I will use
+                                this method of getting work done in other areas of my life instead of trying to juggle
+                                and multi-task when it's not necessary. This mindset shift has taught me the resilience
+                                needed to overcome obstacles and thrive in both academic and professional environments.
+                            </p>
+                            <p>I have also enjoyed completing my ePortfolio and learning more about why it is so
+                                important for my development throughout this course (Di Silvestro and Nadir, 2021). I
+                                have found it very satisfying to develop my own website and have a log of all the work I
+                                have done throughout the module displayed, rather than sitting in a folder on my
+                                computer and I found that knowing the mini projects I complete will be put into my
+                                ePortfolio as artifacts motivating. One thing I would change would be my participation
+                                with the forum discussions in Unit 1 and Unit 8 because I found myself focusing on
+                                coding activities and reading papers. I think going forward I will attempt to engage
+                                more with my peers as I think there is value in hearing a point of view that is
+                                different to my own.
+                            </p>
+                            <p>
+                                In conclusion, this module has been an enlightening and transformative experience for me
+                                as a computer science student. I have learned valuable lessons that I will take with me
+                                to my next module and beyond. Overall, I feel that Object Oriented Programming has been
+                                an invaluable steppingstone in my journey as an MSc student, and I am excited to
+                                continue building upon the skills and knowledge I have acquired.
+                            </p>
+                            <p>773 words</p>
+                            <p>References: </p>
+                            <p>Di Silvestro, F. & Nadir, H. (2021) The Power of ePortfolio Development to Foster
+                                Reflective and Deeper Learning in an Online Graduate Adult Education Program. <em>Adult
+                                    Learning</em> 32(4):154-164.
+                            </p>
+                            <p>Phillips, D. (2018) Python 3 Object-Oriented Programming - Third Edition. 3rd edition.
+                                Packt Publishing. </p>
+                            <p>Reitz, K. (2016) The Hitchhiker’s Guide to Python: <em>Best Practices for
+                                    Development.</em>
+                                O’Reilly. </p>
+                            <p>Rumbaugh, J., Jacobson, I. & Booch, G. (2004) <em>The Unified Modeling Language Reference
+                                    Manual.</em> 2nd ed. Addison-Wesley.
+                            </p>
                             <hr class="major" />
                         </section>
             </div>
