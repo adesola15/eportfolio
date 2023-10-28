@@ -41,13 +41,15 @@
                         <li><a href="#unit-4">Unit 4: Exploring Programming Language Concepts</a></li>
                         <li><a href="#unit-5">Unit 5: An Introduction to Testing</a></li>
                         <li><a href="#unit-6">Unit 6: Using Linters to Support Python Testing</a></li>
-                        <li><a href="#design-doc" style="color: #009ffe">Development Team Project: Design Document</a></li>
+                        <li><a href="#design-doc" style="color: #009ffe">Development Team Project: Design Document</a>
+                        </li>
                         <li><a href="#unit-7">Unit 7: Introduction to Operating Systems</a></li>
                         <li><a href="#unit-8">Unit 8: Cryptography and Its Use in Operating Systems</a></li>
                         <li><a href="#unit-9">Unit 9: Developing an API for a Distributed Environment</a></li>
                         <li><a href="#unit-10">Unit 10: From Distributed Computing to Microarchitectures</a></li>
                         <li><a href="#unit-11">Unit 11: Future trends in Secure Software Development</a></li>
-                        <li><a href="#coding-output" style="color: #009ffe">Development Team Project: Coding Output</a></li>
+                        <li><a href="#coding-output" style="color: #009ffe">Development Team Project: Coding Output</a>
+                        </li>
                         <li><a href="#unit-12">Unit 12: The Great Tanenbaum-Torvalds Debate Revisited</a></li>
                     </ul>
 
@@ -58,21 +60,268 @@
                         <section id="unit-1">
 
                             <h2 id="contents">Unit 1: Introduction to Secure Software Development</h2>
-                            <p>This is what I did for this unit.</p>
+                            <h3>Collaborative Discussion 1: UML flowchart Initial Post</h3>
+                            <h4>Open source tools are available to create UML diagrams, some are listed below. This list
+                                is not exhaustive. The benefit of using such tools is that they ensure that the
+                                recognised UML components are used to represent the parts of the model correctly.
+                                <li>Visual Paradigm</li>
+                                <li>equence Diagram</li>
+                                <li>Umbrello</li>
+                                Choose an open-source UML tool from the list above. Select one of the coding weaknesses
+                                which have been identified by OWASP and create a flowchart of the steps which may have
+                                led to the weakness occurring. Which UML models might you use to present the design of
+                                your proposed software, and why are they the most appropriate choice(s)?
+                            </h4>
+                            <br />
+                            <p>The OWASP coding weakness I will focus on is Cryptographic Failures (OWASP, 2021).
+                                Cryptographic Failures have been chosen by the OWASP as the second most significant
+                                security vulnerability due to their prevalence within web applications and the
+                                significant negative impact they can have. Cryptographic failures are when mistakes or
+                                weaknesses are made in how data is protected using encryption which means the data is
+                                easier for third parties to access. Examples of how this could happen is if sensitive
+                                data is sent in clear text over a vulnerable network or there is mismanagement of
+                                encryption keys and hackers are able to access them and use them to decode encrypted
+                                data (Sharma, 2023).</p>
+                            <p>I believe an activity diagram would be a suitable choice because it focuses on the flow
+                                of activities, and provides a high-level overview of how tasks, decisions, and actions
+                                are interconnected. This means the activity diagram would effectively showcase the
+                                actions that could lead to a Cryptographic Failure and would clearly show the decision
+                                points that lead to a failure, as Cryptographic failures often involve decisions made by
+                                the developers, such as choosing an encryption algorithm or key generation method.
+                                Activity diagrams can also show parallel or concurrent activities, highlighting
+                                situations where multiple actions are happening simultaneously. This is important as
+                                there are multiple ways a Cryptographic Failure could occur and so an activity diagram
+                                allows this to be illustrated. </p>
+                            <span class="image main"><img src="images\SSD Unit 1.png" alt="" /></span>
+                            <p>Figure 1. Activity Diagram for a Cryptographic Failure</p>
+                            <p>References: </p>
+                            <p>OWASP., (2021). OWASP Top Ten. Available at: https://owasp.org/www-project-top-ten/
+                                (Accessed: 14 August 2023).</p>
+                            <p>Sharma, P., (2023). A Deep Dive into OWASP Top 3 Security Risks.</p>
 
                             <hr class="major" />
                         </section>
                         <section id="unit-2">
 
                             <h2 id="content">Unit 2: UML Modelling to Support Secure System Planning</h2>
-                            <p>This is what I did for this unit.</p>
+                            <h3>Scrum Security Review Blog Post</h3>
+                            <h4>Some say that people are the biggest risk of cyber security.</h4>
+                            <h4>Select five terms from ISO/IEC Standard 27000 Section 3 Terms and Definitions and write
+                                a 300-word blog post on how people can be managed to overcome cyber security attacks
+                                from the inside.
+                            </h4>
+                            <p>Cybersecurity is a complex challenge, and one key aspect is handling the human element to
+                                prevent insider threats. By understanding and applying important concepts from ISO/IEC
+                                Standard 27000 Section 3 Terms and Definitions, we can effectively address cybersecurity
+                                risks that come from within an organization.
+                            <ol>
+                                <li>3.69 Risk Management: Managing people within the context of cybersecurity means
+                                    taking
+                                    a systematic approach to understand and deal with risks. This involves identifying
+                                    potential vulnerabilities, assessing how likely threats from within the organisation
+                                    are, and understanding their potential impact. By understanding these risks,
+                                    organisations can tailor their strategies to proactively tackle these specific
+                                    internal
+                                    threats. </li>
+
+                                <li>3.53 Policy: Well-defined and clear security policies are the foundation for
+                                    managing
+                                    insider threats. These policies should outline expected behaviors, responsibilities,
+                                    and
+                                    the consequences of not following them. These policies serve as guidelines for
+                                    employees, creating a culture of awareness and adherence to cybersecurity practices.
+                                </li>
+
+                                <li>3.46 Monitoring: Continuous monitoring is crucial for quickly detecting and
+                                    responding
+                                    to insider threats. Using robust monitoring systems and technologies allows
+                                    organisations to observe user activities, network traffic, and system behaviors.
+                                    Identifying suspicious activities promptly minimises potential damage.</li>
+
+                                <li>3.40 Likelihood: The likelihood of insider threats can vary based on factors like
+                                    the
+                                    organisation's industry, the type of data they handle, and the security measures in
+                                    place. Understanding this likelihood is important for prioritising security efforts
+                                    and allocating resources effectively.</li>
+
+                                <li>3.15 Control Objective: Setting clear control objectives is essential for managing
+                                    insider
+                                    threats. These objectives define specific security goals and measures that need to
+                                    be
+                                    achieved. Control objectives can include user access controls, data encryption, and
+                                    incident response plans, among other measures, to prevent and mitigate internal
+                                    threats
+                                    effectively.</li>
+                            </ol>
+                            <p>By incorporating these concepts into their cybersecurity strategy, organisations can
+                                empower their employees to actively participate in defending against insider cyber
+                                threats. Educating employees, keeping them informed, and developing a security-conscious
+                                culture can make them an integral part of the solution, reducing the probability of
+                                internal attacks and enhancing overall cybersecurity. Ultimately, it's the
+                                collaboration between people and technology that can help organisations overcome
+                                internal cybersecurity challenges.</p>
+                            <p>References:</p>
+                            <p>OBP., (2018) ISO/IEC 27000:2018(en) Information technology – Security techniques,
+                                Information security management systems – Overview and vocabulary. Available at:
+                                https://www.iso.org/obp/ui/#iso:std:iso-iec:27000:ed-5:v1:en (Accessed: 22 August 2023).
+                            </p>
 
                             <hr class="major" />
                         </section>
                         <section id="unit-3">
 
                             <h2 id="content">Unit 3: Programming Languages: History, Concepts & Design</h2>
-                            <p>This is what I did for this unit.</p>
+                            <h3>Collaborative Discussion 1: UML flowchart Summary Post</h3>
+                            <p>I appreciate the feedback from my peers on my post on cryptographic failures. Their
+                                contributions have added valuable insights to my initial post, offering different
+                                perspectives.</p>
+
+                            <p>One of my classmates emphasised the importance of using an activity diagram
+                                to visualise the process and identify potential flaws. Additionally, they suggested
+                                delving deeper into the advantages of this approach.</p>
+
+                            <p>Another classmate recommended enhancing the clarity of the diagrams by distinguishing
+                                between the perspectives of a hacker and a legitimate user. This approach would
+                                allow a better understanding of the processes the activity diagram showed. They also
+                                suggested
+                                exploring alternative UML diagrams, such as use case diagrams, to systematically
+                                identify potential vulnerabilities, which I think is a very valid point.</p>
+
+                            <p>Another issue brought up was the aspect of effective encryption key
+                                management and other encryption-related issues which I hadn't considered.</p>
+
+                            <p>Cryptographic failures, as outlined in my initial post are an important issue. They
+                                represent vulnerabilities in
+                                the systems' encryption mechanisms, posing a substantial risk to sensitive data.
+                                Understanding these vulnerabilities is important for enhanced security.</p>
+
+                            <p>Activity diagrams are adept at representing the flow
+                                of actions, choices, and interactions within a system. They help in visualising the
+                                process, decisions, and activities that can lead to vulnerabilities. Furthermore, they
+                                can effectively depict parallel actions, which is critical as cryptographic weaknesses
+                                can occur along several pathways. This approach is in alignment with recommendations by
+                                Farooq (2022), who emphasises that activity diagrams can graphically illustrate the
+                                weaknesses and mistakes in the process by focusing on the decisions and activities that
+                                result in cryptographic failures.</p>
+
+                            <p>When looking into cryptographic failures, we should also consider the impact and
+                                consequences. Ali (2023) has detailed potential implications of cryptographic failures,
+                                including data breaches, a decline in trust, legal and compliance issues, and
+                                intellectual property theft. These consequences show the urgency of addressing
+                                cryptographic vulnerabilities and implementing effective preventive measures.
+                            </p>
+
+                            <p>References:</p>
+                            <p>Ali, Z. (2023). Cryptographic Failures: Understanding the Pitfalls and Impact. [online]
+                                Available at:
+                                https://www.linkedin.com/pulse/cryptographic-failures-understanding-pitfalls-impact-zahid-ali/
+                            </p>
+                            <p>Farooq, A. (2022). Threat modelling with UML for cybersecurity risk management in OT-IT
+                                integrated infrastructures. [online] Available at:
+                                https://core.ac.uk/download/pdf/521288263.pdf
+                            </p>
+
+                            <h3>Team Discussion: What is a Secure Programming Language?</h3>
+                            <p>You should read Chapter 2,6,7,8 of the course text (Pillai, 2017) and Cifuentes & Bierman
+                                (2019) and then answer the questions below, adding them as evidence to your e-portfolio.
+
+                            <ol>
+                                <li>What factors determine whether a programming language is secure or not?</li>
+                                <br />
+                                <p>Cifuentes & Bierman (2019) propose that a secure programming language should provide
+                                    first-class language support to address common, significant vulnerabilities found in
+                                    real-world software. They suggest that secure languages should address
+                                    vulnerabilities such as buffer errors, injection errors, and information leak errors
+                                    and should provide "first-class language support" to mitigate these vulnerabilities.
+                                    These three vulnerabilities have been identified through analysis of the National
+                                    Vulnerability Database (NVD). The presence of safe abstractions, mechanisms for
+                                    preventing vulnerabilities, and proper handling of memory and data manipulation are
+                                    key factors that determine whether a programming language is secure.</p>
+
+                                <p>Factors that determine whether a programming language is secure include:</p>
+                                <ul>
+                                    <li>Support for secure coding practices: A secure language should provide features
+                                        and
+                                        constructs that make it easier for developers to write secure code.</li>
+
+                                    <li>Handling of common security vulnerabilities: It should address the causes of
+                                        common
+                                        and significant vulnerabilities found in real-world software, such as buffer
+                                        overflows, injection errors, and information leaks.</li>
+
+                                    <li>Memory management: The language's memory management mechanisms should prevent
+                                        vulnerabilities like buffer overflows.</li>
+
+                                    <li>Type safety: Type safety mechanisms can help prevent certain types of
+                                        vulnerabilities.</li>
+
+                                    <li>Security libraries: Availability of security libraries and tools for encryption,
+                                        authentication, and access control.</li>
+
+                                    <li>Community support: A strong community that actively addresses security issues
+                                        and
+                                        provides security patches.</li>
+
+                                    <p>Mainstream programming languages, including Python, are considered inherently
+                                        insecure because they do not fully address all these factors. </p>
+                                </ul>
+                                <li>Could Python be classed as a secure language? Justify your answer.</li>
+                                <br />
+                                <p>Cifuentes & Bierman (2019) argue that no mainstream programming language, including
+                                    the ones commonly used today (such as Java, C, C++, Python, PHP, JavaScript, and
+                                    Ruby) address all three categories of vulnerabilities: buffer errors, injection
+                                    errors, and information leak errors. While Python is acknowledged to address certain
+                                    vulnerabilities like buffer errors through managed memory, and some aspects of
+                                    injection errors through taint tracking, it does not provide safe abstractions for
+                                    preventing all the identified vulnerabilities. </p>
+
+                                <p> Given this analysis, it could be argued that Python, like other mainstream
+                                    languages, may not be fully classified as a secure language according to the
+                                    authors' definition, which requires addressing all three categories of
+                                    vulnerabilities. However, Python's focus on readability, ease of use, and its
+                                    ongoing community efforts to improve security can contribute to writing secure code
+                                    within the language. </p>
+
+                                <p> Therefore, Python is not classed as a completely secure language. While Python has
+                                    features and libraries that can be used to write secure code, it also has
+                                    limitations and areas where it may not fully address security concerns. Python has
+                                    been analysed for security vulnerabilities and found to have issues, particularly in
+                                    areas like input validation, overflow errors, and web application security. </p>
+
+                                <p> However, Python's security can be improved through careful coding practices, using
+                                    secure libraries, and staying informed about security best practices. Python's
+                                    community actively addresses security issues and provides updates, which is a
+                                    positive aspect. </p>
+
+                                <p> In summary, Python can be used to write secure code, but it depends on how it is
+                                    used and whether developers follow secure coding practices. It may not be classed as
+                                    a fully secure language, but it can be a secure choice when used correctly. </p>
+                                <li>Python would be a better language to create operating systems than C. Discuss.
+                                </li><br />
+                                <p>Python is not typically considered a suitable language for creating operating
+                                    systems. Operating systems require low-level control over hardware and memory, which
+                                    Python lacks due to its high-level nature. C, on the other hand, is commonly used
+                                    for operating system development because it provides the necessary low-level
+                                    features and control. </p>
+
+                                <p> While Python is known for its simplicity and ease of use, these features are not
+                                    well-suited for building the complex, performance-critical components of an
+                                    operating system. C, with its close-to-hardware capabilities, is better suited for
+                                    this purpose. </p>
+
+                                <p> In summary, Python is not a better language than C for creating operating systems.
+                                    Each language has its own strengths and is suited for different purposes, and the
+                                    choice of language depends on the specific requirements of the project. </p>
+
+                            </ol>
+                            </p>
+                            <p></p>
+                            <p>References:</p>
+                            <p>Cifuentes, C. & Bierman, G. (2019) <em>What is a Secure Programming Language? </em>3rd
+                                Summit on
+                                Advances in Programming Languages (SNAPL).136(3): 1 - 15. </p>
+                            <p>Pillai, A.B. (2017) <em>Software Architecture with Python.</em> Birmingham, UK. Packt
+                                Publishing Ltd. </p>
 
                             <hr class="major" />
                         </section>
@@ -175,8 +424,11 @@
 
                 <!-- Footer -->
                 <footer id="footer">
-                    <p class="copyright">&copy; Untitled. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-                    <p class="copyright"> &copy; Flaticon. Portfolio favicon created by <a href="https://www.flaticon.com/free-icon/portfolio_1061440" title="portfolio icons">Freepik.</a></p>
+                    <p class="copyright">&copy; Untitled. All rights reserved. Design: <a
+                            href="https://html5up.net">HTML5 UP</a>.</p>
+                    <p class="copyright"> &copy; Flaticon. Portfolio favicon created by <a
+                            href="https://www.flaticon.com/free-icon/portfolio_1061440"
+                            title="portfolio icons">Freepik.</a></p>
                 </footer>
 
             </div>
